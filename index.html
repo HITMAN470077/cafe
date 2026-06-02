@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>کافه رویا | منوی آنلاین هوشمند</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components/cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Vazirmatn:wght@300;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="app-header">
+        <div class="header-pill">
+            <button id="search-toggle-btn" class="icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <span class="brand-name">CAFE ROYA</span>
+            <button id="cart-toggle-btn" class="icon-btn relative" aria-label="Cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span id="cart-badge" class="badge-dot"></span>
+            </button>
+        </div>
+    </header>
+
+    <div id="search-overlay" class="search-backdrop">
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="نام آیتم یا ترکیبات را جستجو کنید..." autocomplete="off">
+            <button id="close-search" class="close-btn">&times;</button>
+        </div>
+    </div>
+
+    <main class="app-content">
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-tag">EST. 2025</span>
+                <h1 class="hero-title">هنرِ طعم،<br>شکوهِ لحظه‌ها</h1>
+                <p class="hero-subtitle">تجربه‌ای متفاوت از قهوه و غذا در فضایی مدرن</p>
+            </div>
+        </section>
+
+        <div class="rail-container-static">
+            <div id="category-rail" class="story-rail"></div>
+        </div>
+
+        <div id="menu-container" class="menu-grid"></div>
+    </main>
+
+    <div id="cart-component-placeholder"></div>
+
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content nano-card-modal">
+            <button id="close-modal-btn" class="modal-close-btn">&times;</button>
+            <div class="modal-img-wrapper">
+                <img id="modal-img" src="" alt="Product" class="modal-img">
+            </div>
+            <div class="modal-details">
+                <h2 id="modal-title" class="modal-title"></h2>
+                <p id="modal-desc" class="modal-desc"></p>
+                <div class="modal-footer">
+                    <span id="modal-price" class="modal-price"></span>
+                    <button id="modal-add-btn" class="modal-add-btn">افزودن به سبد</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-bar" class="mobile-bar">
+        <div class="bar-info">
+            <span id="mobile-count" class="bar-badge">0</span>
+            <span class="bar-text">آیتم انتخاب شده</span>
+        </div>
+        <span id="mobile-total" class="bar-total">0 تومان</span>
+    </div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="components/cart.js"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
